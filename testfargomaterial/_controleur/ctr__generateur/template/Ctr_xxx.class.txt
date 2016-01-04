@@ -1,0 +1,36 @@
+<?php
+/**
+ * Classe controleur de la table [nomTable].
+ *
+ * Cette classe permet la gestion des actions de la table [nomTable]
+ * 
+ *
+ * @author Nicolas BORDES <nicolasbordes@me.com>
+ * @version 1.0
+ * @category Controleur
+*/
+
+/**
+* @property string $table nom de la table
+* @property string $className nom de class modèle
+* @property string $titre titre de la page (balse HTML title)
+* @property string $action nom de la méthode à appeler
+* @property string $vue nom de la vue à charger
+* @property string $gabarit nom du gabarit à utiliser
+*/
+
+class Ctr_[nomTable] extends Controleur {
+
+	/**
+	* Constructeur de la classe Ctr_[nomTable]
+	* Appel le constructeur parent (_framework/Controleur.class.php)
+	* en luissant passant le nom de la methode (action) à appeler
+	*/
+    public function __construct($a) {
+		//isAuth();
+        parent::__construct("[nomTable]", $a);
+    }
+
+}
+
+?>

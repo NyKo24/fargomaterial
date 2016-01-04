@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Mot de passe oublié</title>
+</head>
+<body>
+<h1>Bonjour [prenom]</h1>
+<p>Suite à votre demande voici pour nouveau mot de passe : </p>
+<ul>
+	<li>Votre login : [login]</li>
+	<li>Votre nouveau mot de passe : [mdp]</li>
+</ul>
+<p>Vous pouvez vous connecter en suivant ce lien : [lien] ou en <a href="[lien]">cliquant ici</a> </p>
+Cordialement,
+<br><br>
+L'équipe [titreSite]
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col s12">
+		<table class="bordered striped highlight responsive-table">
+			<caption><a class="waves-effect waves-light btn blue" href="<?=BASE_URL?>[nomTable]/editer/id/0">Nouveau</a></caption>
+			<thead>
+				<tr>
+					<th>Editer</th>[thListeChamps]
+					<th>Supprimer</th>
+				</tr>
+			</thead>	
+			<tbody>
+				<?php
+				while ($row=$result->fetch_assoc()) { ?>
+				<tr>
+					<td><a class="waves-effect waves-light btn green" href="<?=BASE_URL?>[nomTable]/editer/id/<?=$row["[nomCle]"]?>">Editer</a></td>[tdListeValeur]
+					<td><a class="waves-effect waves-light btn red" href="<?=BASE_URL?>[nomTable]/supprimer/id/<?=$row["[nomCle]"]?>">Supprimer</a></td>
+				</tr>
+				<? } ?>
+			</tbody>	
+		</table>
+	</div>
+</div>            

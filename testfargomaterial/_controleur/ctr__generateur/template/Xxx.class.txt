@@ -1,0 +1,33 @@
+<?php
+/**
+ * Classe modèle de la table [nomTable].
+ *
+ * Cette classe permet la manipulation des données de la table [nomTable]
+ * 
+ *
+ * @author Nicolas BORDES <nicolasbordes@me.com>
+ * @version 1.0
+ * @category Modèle
+*/
+
+/**
+ * @method mixed get(string $indice) retourne la valeur de $indice dans $this->data
+ * @method void set(string $indice, mixed $valeur) set à l'indice $this->data[$indice] la valeur $valeur, si @indice n'est pas défini une exception est renvoyée
+ *
+ * @property string $cle Nom du champ PRIMARY KEY dans la table
+ * @property string $table Nom de la table
+ * @property array $data Tableau où les clés associatives sont les noms des champs de la table
+*/
+class [nomClasse] extends Table {
+
+	/**
+	* Constructeur de la classe [nonClasse]
+	* Appel le constructeur parent (_framework/Table.class.php)
+	* en luissant passant le nom de la table et le nom du champ clé primaire
+	*/
+	public function __construct() {
+		parent::__construct("[nomTable]", "[nomCle]");
+	}
+	
+}
+?>

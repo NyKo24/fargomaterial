@@ -1,0 +1,25 @@
+<?php
+
+class Ctr_[nomTable] extends Controleur {
+
+    public function __construct($a) {
+	//isAuth();
+        parent::__construct("[nomTable]", $a);
+    }
+
+/*
+     * Surcharge de parrent::sauver()
+     * crypte $_POST["uti_mdp"] puis l'inject dans $_POST["uti_mdp"]
+     * charge $_POST dans $obj->date 
+     * Sauvegarde en base de donnée
+     */
+	function sauver() {
+    	$obj = new $this->className();
+    	$_POST["uti_mdp"]=cryptage($_POST["uti_mdp"]);
+    	$obj->chargerDepuisTableau($_POST);
+    	if ($obj->sauver())
+    		header("location:" . BASE_URL . "$this->table/lister");
+    }
+}
+
+?>

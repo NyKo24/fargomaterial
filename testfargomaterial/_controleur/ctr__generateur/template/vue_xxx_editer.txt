@@ -1,0 +1,8 @@
+<form role="form" method="post" action="<?=BASE_URL?><?= $this->table ?>/sauver">
+	<input type="hidden" name="<?= $obj->cle ?>" id="<?=  $obj->cle ?>" value="<?= $id ?>" />
+     
+[listeChamps]
+	<button class="btn waves-effect waves-light" type="submit" value="Enregistrer" name="btSubmit">Enregistrer
+    	<i class="material-icons right">send</i>
+  	</button>
+</form>            
