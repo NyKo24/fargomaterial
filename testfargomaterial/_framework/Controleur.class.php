@@ -195,6 +195,17 @@ class Controleur {
     		<?php
     		
         }
+       
+        /**
+         * Met au format "JJ-MM-YYYY" une date au format MySQL (YYYY-MM-DD)
+         * @param string $dateSQL
+         * @param string $delimiteur
+         * @return string
+         */
+        public function formatDate($dateSQL,$delimiteur = "/"){
+        	$array = explode("-", $dateSQL);
+        	return $array[2].$delimiteur.$array[1].$delimiteur.$array[0];
+        }
 }
 
 ?>
