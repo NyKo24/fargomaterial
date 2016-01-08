@@ -260,6 +260,7 @@ class Table {
             if (self::$con->connect_errno)
                 echo "Echec lors de la connexion à MySQL : " . self::$con->connect_error;
         }
+        self::$con->set_charset("utf8");
         return self::$con;
     }
 
