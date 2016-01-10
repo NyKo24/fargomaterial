@@ -54,9 +54,9 @@ class Table {
      * @return mixed
      */
     public function __get($indice){
-    		if(isset($this->data[str_replace("_id","", $this->cle)."_".$indice]))
+    		if(array_key_exists(str_replace("_id","", $this->cle)."_".$indice,$this->data))
     			return $this->data[str_replace("_id","", $this->cle)."_".$indice];
-    		else if(isset($this->data[$indice]))
+    		else if(array_key_exists($indice,$this->data))
     			return $this->data[$indice];
     		else 
     			throw new Exception($indice . " n'existe pas dans \$this->data");
@@ -260,7 +260,6 @@ class Table {
             if (self::$con->connect_errno)
                 echo "Echec lors de la connexion à MySQL : " . self::$con->connect_error;
         }
-        self::$con->set_charset("utf8");
         return self::$con;
     }
 
